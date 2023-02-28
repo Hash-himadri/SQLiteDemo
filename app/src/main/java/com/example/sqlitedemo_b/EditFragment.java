@@ -105,9 +105,6 @@ public class EditFragment extends Fragment {
         Cursor CR = dop.getInfo(dop, ID);
 
 
-        if(CR.isNull(0)){
-            txtView.setText("Student not found");
-        }else{
             CR.moveToFirst();
 
             String id = CR.getString(0);
@@ -116,7 +113,7 @@ public class EditFragment extends Fragment {
             String marks = CR.getString(3);
 
             txtView.setText("ID: "+id+"\nName: "+name+"\nSurname: "+surname+"\nMarks: "+marks);
-        }
+
 
         builder.setView(txtView)
                 .setTitle("Student Info")
